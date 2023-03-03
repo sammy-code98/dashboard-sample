@@ -7,13 +7,13 @@ const theme = extendTheme({
   },
   colors: {
     primary: {
-      100: "#F2656F",
-      200: "#FCE0E2",
-      300: "#F9B2B7",
-      400: "#F6989F",
-      500: "#F2656F",
+      100: "#52b6ff",
+      200: "#a6c8ff",
+      300: "#68bfff",
+      400: "#7dc8ff",
+      500: "#27A4FF",
       700: "#544E50",
-      900: "#27959C",
+      900: "#3dadff",
     },
     secondary: {
       100: "#31BAC3",
@@ -21,9 +21,9 @@ const theme = extendTheme({
     transparent: "transparent",
     black: "#000",
     white: "#fff",
-    accent: "#3BDFEA",
+    accent: "#a6c8ff",
     textFaint: "#ABABAB",
-    accentGreen: "#31C36C",
+    accentGreen: "#d4edff",
   },
   components: {
     Button: {
