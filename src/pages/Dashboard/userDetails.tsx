@@ -2,7 +2,6 @@ import React from 'react'
 import { Box, IconButton, Image, Heading, Avatar, Text, Icon, Button } from '@chakra-ui/react'
 import { DashboardLayout } from '../../layout'
 import { MdKeyboardArrowLeft, MdLocationPin, MdOutlinePhone, MdEmail, MdOutlineRestoreFromTrash } from "react-icons/md";
-import Logo from "../../assets/logo.svg"
 import Verified from "../../assets/verified.svg"
 import Star from "../../assets/star.svg"
 import Heart from "../../assets/heart.svg"
@@ -16,7 +15,6 @@ export default function UserDetails() {
                 <Box p='4rem' bgColor='white' borderRadius='xl' shadow={{ base: 'none', md: 'md' }}>
                     <IconButton aria-label='back home' variant='ghost' size='lg' icon={<MdKeyboardArrowLeft />} />
                     <Box display='flex' gap={6}>
-                        <Image src={Logo} alt='credibLogo' />
                         <Heading textColor='primary.700'>User Details</Heading>
                     </Box>
                     <Box mt='2rem' display='flex' gap={3}>
@@ -24,7 +22,7 @@ export default function UserDetails() {
 
                         <Box display='flex' justifyContent='space-between' alignItems='flex-start' gap={4} >
                             <Box>
-                                <Text fontWeight={700} textColor='primary.700' fontSize='md'>Divine Orji</Text>
+                                <Text fontWeight={700} textColor='primary.700' fontSize='md'>Clement kiji</Text>
 
                             </Box>
 
