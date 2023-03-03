@@ -1,7 +1,6 @@
 import React from 'react'
 import { DashboardLayout } from '../../layout'
 import { Box, Heading, Image } from '@chakra-ui/react'
-import Logo from "../../assets/logo.svg"
 import { SummaryCards } from '../../components/cards'
 import { summaryCard } from '../../fakeData/summaryCard'
 import { TableTab } from '../../components/TableTab'
@@ -13,8 +12,7 @@ export default function Dashboard() {
         <DashboardLayout>
             <Box>
                 <Box p='4rem' bgColor='white' borderRadius='xl' shadow={{ base: 'none', md: 'md' }}>
-                    <Box display='flex' gap={6}>
-                        <Image src={Logo} alt='credibLogo' />
+                    <Box>
                         <Heading textColor='primary.700'>Dashboard</Heading>
                     </Box>
 

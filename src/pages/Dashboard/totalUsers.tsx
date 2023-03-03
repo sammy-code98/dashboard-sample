@@ -2,7 +2,6 @@ import React from 'react'
 import { DashboardLayout } from '../../layout'
 import { Box, Button, Heading, IconButton, Image, Input, InputGroup, InputLeftElement, Menu, MenuButton, MenuItem, MenuList } from '@chakra-ui/react'
 import { MdKeyboardArrowLeft, MdSearch, MdKeyboardArrowDown, MdLocationPin } from "react-icons/md";
-import Logo from "../../assets/logo.svg"
 import Group from "../../assets/group.svg"
 
 const AllMenu = () => {
@@ -50,9 +49,8 @@ export default function TotalUsers() {
                 <Box p='4rem' bgColor='white' borderRadius='xl' shadow={{ base: 'none', md: 'md' }}>
                     <IconButton aria-label='back home' variant='ghost' size='lg' icon={<MdKeyboardArrowLeft />} />
                     <Box display='flex' gap={6}>
-                        <Image src={Logo} alt='credibLogo' />
                         <Box display='flex' gap={2}>
-                            <Image src={Group} alt='credibLogo' />
+                            <Image src={Group} alt='Logo' />
                             <Heading textColor='primary.700'>Total Users</Heading>
                             <Heading textColor='primary.700'>2468</Heading>
                         </Box>
@@ -68,7 +66,6 @@ export default function TotalUsers() {
                             <Location />
                         </Box>
                     </Box>
-
 
                     <Box mt='4rem'> table</Box>
                 </Box>
