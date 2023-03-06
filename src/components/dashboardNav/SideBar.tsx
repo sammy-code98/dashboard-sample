@@ -3,24 +3,41 @@ import {
     Box,
     IconButton,
     Text,
+    Link
 } from '@chakra-ui/react'
 import PropTypes, { InferProps } from 'prop-types';
 import { SideBarLinks } from '../../components/dashboardNav/sideBarLinks'
-
+import { NavLink as RouterLink } from 'react-router-dom';
 
 
 const SidebarProps = {
     linkIcon: PropTypes.any,
-    title: PropTypes.string.isRequired
+    title: PropTypes.string.isRequired,
+    linkName: PropTypes.string.isRequired
 }
 
 
-const SideBarContent = ({ linkIcon, title }: InferProps<typeof SidebarProps>): JSX.Element => {
+const SideBarContent = ({ linkIcon, title, linkName }: InferProps<typeof SidebarProps>): JSX.Element => {
     return (
         <>
+            <Link
+                as={RouterLink}
+                to={linkName}
+                _hover={{
+                    textDecoration: 'none'
+                }}
+                _activeLink={{
+                    bg: 'primary.400',
+                    color: 'white',
+                    textColor: 'white',
+                }}
+
+            >
+
             <Box
                 mt='4rem'
                 px='1rem'
+                    py='0.5rem'
                 display='flex'
                 textColor='primary.100'
                 justifyItems='center'
@@ -43,7 +60,10 @@ const SideBarContent = ({ linkIcon, title }: InferProps<typeof SidebarProps>): J
 
                     />
                 <Text fontWeight={500} >{title}</Text>
+
             </Box>
+            </Link>
+
         </>
     )
 
@@ -65,7 +85,9 @@ export default function SideBar(): JSX.Element {
                 <SideBarContent
                     key={sideLinks.title}
                     title={sideLinks.title}
-                    linkIcon={sideLinks.linkIcon} />
+                    linkIcon={sideLinks.linkIcon}
+                    linkName={sideLinks.linkName}
+                />
 
             ))}
 

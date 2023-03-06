@@ -7,10 +7,10 @@ import {
 } from "react-icons/md";
 
 export const SideBarLinks = [
-  { title: "Dashboard", linkIcon: MdDashboard },
-  { title: "Sales", linkIcon: MdOutlineAutoGraph },
-  { title: "Services", linkIcon: MdCardGiftcard },
-  { title: "Business", linkIcon: MdAccountBalance },
+  { title: "Dashboard", linkIcon: MdDashboard, linkName: "/dashboard" },
+  { title: "Sales", linkIcon: MdOutlineAutoGraph, linkName: "#" },
+  { title: "Services", linkIcon: MdCardGiftcard, linkName: "#" },
+  { title: "Business", linkIcon: MdAccountBalance, linkName: "#" },
 
-  { title: "Logout", linkIcon: MdOutlineLogout },
+  { title: "Logout", linkIcon: MdOutlineLogout, linkName: "#" },
 ];

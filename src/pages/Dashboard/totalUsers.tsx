@@ -1,7 +1,7 @@
 import React from 'react'
 import { DashboardLayout } from '../../layout'
 import { Box, Button, Heading, IconButton, Image, Input, InputGroup, InputLeftElement, Menu, MenuButton, MenuItem, MenuList } from '@chakra-ui/react'
-import { MdKeyboardArrowLeft, MdSearch, MdKeyboardArrowDown, MdLocationPin } from "react-icons/md";
+import { MdSearch, MdKeyboardArrowDown, MdLocationPin } from "react-icons/md";
 import Group from "../../assets/group.svg"
 
 const AllMenu = () => {
@@ -47,7 +47,6 @@ export default function TotalUsers() {
         <DashboardLayout>
             <Box>
                 <Box p='4rem' bgColor='white' borderRadius='xl' shadow={{ base: 'none', md: 'md' }}>
-                    <IconButton aria-label='back home' variant='ghost' size='lg' icon={<MdKeyboardArrowLeft />} />
                     <Box display='flex' gap={6}>
                         <Box display='flex' gap={2}>
                             <Image src={Group} alt='Logo' />
