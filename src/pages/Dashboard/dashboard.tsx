@@ -34,6 +34,7 @@ export default function Dashboard() {
                                     totalValue={sumCard.totalValue}
                                     description={sumCard.description}
                                     descValue={sumCard.descValue}
+                                    link={sumCard.link}
                                 />
 
                             )
