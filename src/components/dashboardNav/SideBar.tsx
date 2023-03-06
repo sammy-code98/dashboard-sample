@@ -8,6 +8,7 @@ import PropTypes, { InferProps } from 'prop-types';
 import { SideBarLinks } from '../../components/dashboardNav/sideBarLinks'
 
 
+
 const SidebarProps = {
     linkIcon: PropTypes.any,
     title: PropTypes.string.isRequired
@@ -43,8 +44,6 @@ const SideBarContent = ({ linkIcon, title }: InferProps<typeof SidebarProps>): J
                     />
                 <Text fontWeight={500} >{title}</Text>
             </Box>
-
-
         </>
     )
 
@@ -70,7 +69,9 @@ export default function SideBar(): JSX.Element {
 
             ))}
 
+            <Box>
 
+            </Box>
         </Box>
     )
 }
