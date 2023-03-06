@@ -2,7 +2,6 @@ import React from 'react'
 import {
     Box,
     IconButton,
-    VStack,
     Text,
 } from '@chakra-ui/react'
 import PropTypes, { InferProps } from 'prop-types';
@@ -18,25 +17,34 @@ const SidebarProps = {
 const SideBarContent = ({ linkIcon, title }: InferProps<typeof SidebarProps>): JSX.Element => {
     return (
         <>
-            <Box mt='4rem' display='flex' justifyContent='center' alignItems='center'>
-                <VStack>
-                    <IconButton
-
+            <Box
+                mt='4rem'
+                px='1rem'
+                display='flex'
+                textColor='primary.100'
+                justifyItems='center'
+                alignItems='center'
+                gap={4}
+                cursor='pointer'
+                _hover={{
+                    bg: 'primary.400',
+                    color: 'white',
+                    textColor: 'white',
+                }}
+            >
+                <IconButton
                         as={linkIcon}
-                        rounded='full'
-                        bg='primary.200'
-                        color='primary.800'
+                    rounded='full'
                         aria-label='nav button'
                         size='sm'
                         icon={linkIcon}
-                        _hover={{
-                            bg: 'primary.100',
-                            color: 'white'
-                        }}
+                    variant='ghost'
+
                     />
-                    <Text fontWeight={500} textColor='primary.100'>{title}</Text>
-                </VStack>
+                <Text fontWeight={500} >{title}</Text>
             </Box>
+
+
         </>
     )
 
@@ -61,6 +69,8 @@ export default function SideBar(): JSX.Element {
                     linkIcon={sideLinks.linkIcon} />
 
             ))}
+
+
         </Box>
     )
 }
