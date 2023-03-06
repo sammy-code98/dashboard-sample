@@ -29,11 +29,13 @@ export default function Dashboard() {
                         {summaryCard.map(sumCard => {
                             return (
                                 <SummaryCards
+                                    key={sumCard.title}
                                     title={sumCard.title}
                                     cardIcon={sumCard.cardIcon}
                                     totalValue={sumCard.totalValue}
                                     description={sumCard.description}
                                     descValue={sumCard.descValue}
+                                    link={sumCard.link}
                                 />
 
                             )

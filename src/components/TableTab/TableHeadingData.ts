@@ -3,7 +3,7 @@ import {
   MdSyncAlt,
   MdStorefront,
   MdOutlineShoppingBag,
-  MdCalendarToday,
+  MdContactPage,
 } from "react-icons/md";
 
 const tabData = [
@@ -32,8 +32,9 @@ const tabData = [
     content: "table data.",
   },
   {
-    label: "12-12-12",
-    icon: MdCalendarToday,
+    label: "Clients",
+    icon: MdContactPage,
+    total: "20",
     content: "table data.",
   },
 ];

@@ -13,6 +13,7 @@ export const summaryCard = [
     totalValue: "2468",
     description: "Registered today:",
     descValue: "20",
+    link: "/total-users",
   },
   {
     title: "Vendors",
@@ -20,6 +21,7 @@ export const summaryCard = [
     totalValue: "1290",
     description: "Registered today:",
     descValue: "20",
+    link: "#",
   },
   {
     title: "Clients",
@@ -27,6 +29,7 @@ export const summaryCard = [
     totalValue: "1135",
     description: "Registered today:",
     descValue: "20",
+    link: "#",
   },
   {
     title: "Businesses",
@@ -34,6 +37,7 @@ export const summaryCard = [
     totalValue: "1378",
     description: "Created today:",
     descValue: "10",
+    link: "#",
   },
   {
     title: "Services",
@@ -41,5 +45,6 @@ export const summaryCard = [
     totalValue: "6789",
     description: "Created today:",
     descValue: "10",
+    link: "#",
   },
 ];

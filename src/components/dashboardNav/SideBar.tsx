@@ -2,41 +2,68 @@ import React from 'react'
 import {
     Box,
     IconButton,
-    VStack,
     Text,
+    Link
 } from '@chakra-ui/react'
 import PropTypes, { InferProps } from 'prop-types';
 import { SideBarLinks } from '../../components/dashboardNav/sideBarLinks'
+import { NavLink as RouterLink } from 'react-router-dom';
 
 
 const SidebarProps = {
     linkIcon: PropTypes.any,
-    title: PropTypes.string.isRequired
+    title: PropTypes.string.isRequired,
+    linkName: PropTypes.string.isRequired
 }
 
 
-const SideBarContent = ({ linkIcon, title }: InferProps<typeof SidebarProps>): JSX.Element => {
+const SideBarContent = ({ linkIcon, title, linkName }: InferProps<typeof SidebarProps>): JSX.Element => {
     return (
         <>
-            <Box mt='4rem' display='flex' justifyContent='center' alignItems='center'>
-                <VStack>
-                    <IconButton
+            <Link
+                as={RouterLink}
+                to={linkName}
+                _hover={{
+                    textDecoration: 'none'
+                }}
+                _activeLink={{
+                    bg: 'primary.400',
+                    color: 'white',
+                    textColor: 'white',
+                }}
 
+            >
+
+            <Box
+                mt='4rem'
+                px='1rem'
+                    py='0.5rem'
+                display='flex'
+                textColor='primary.100'
+                justifyItems='center'
+                alignItems='center'
+                gap={4}
+                cursor='pointer'
+                _hover={{
+                    bg: 'primary.400',
+                    color: 'white',
+                    textColor: 'white',
+                }}
+            >
+                <IconButton
                         as={linkIcon}
-                        rounded='full'
-                        bg='primary.200'
-                        color='primary.800'
+                    rounded='full'
                         aria-label='nav button'
                         size='sm'
                         icon={linkIcon}
-                        _hover={{
-                            bg: 'primary.100',
-                            color: 'white'
-                        }}
+                    variant='ghost'
+
                     />
-                    <Text fontWeight={500} textColor='primary.100'>{title}</Text>
-                </VStack>
+                <Text fontWeight={500} >{title}</Text>
+
             </Box>
+            </Link>
+
         </>
     )
 
@@ -58,9 +85,15 @@ export default function SideBar(): JSX.Element {
                 <SideBarContent
                     key={sideLinks.title}
                     title={sideLinks.title}
-                    linkIcon={sideLinks.linkIcon} />
+                    linkIcon={sideLinks.linkIcon}
+                    linkName={sideLinks.linkName}
+                />
 
             ))}
+
+            <Box>
+
+            </Box>
         </Box>
     )
 }

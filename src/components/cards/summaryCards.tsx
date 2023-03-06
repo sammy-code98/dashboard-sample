@@ -2,17 +2,21 @@ import React from 'react'
 import { Box, Heading, Icon, Text } from '@chakra-ui/react'
 import PropTypes, { InferProps } from 'prop-types';
 import { MdNorthEast } from "react-icons/md";
+import { Link } from 'react-router-dom';
 
 const SummaryCardProps = {
     title: PropTypes.string.isRequired,
     cardIcon: PropTypes.any,
     totalValue: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
-    descValue: PropTypes.string.isRequired
+    descValue: PropTypes.string.isRequired,
+    link: PropTypes.string.isRequired
 
 }
-export default function SummaryCards({ title, cardIcon, totalValue, description, descValue }: InferProps<typeof SummaryCardProps>): JSX.Element {
+export default function SummaryCards({ title, cardIcon, totalValue, description, descValue, link }: InferProps<typeof SummaryCardProps>): JSX.Element {
     return (
+        <>
+            <Link to={link}>
         <Box
             bgColor='#F9F9F9'
             borderRadius='10px'
@@ -40,5 +44,9 @@ export default function SummaryCards({ title, cardIcon, totalValue, description,
                 </Box>
             </Box>
         </Box>
+            </Link>
+
+        </>
+
     )
 }

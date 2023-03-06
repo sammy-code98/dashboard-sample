@@ -1,7 +1,7 @@
 import React from 'react'
 import { Box, IconButton, Image, Heading, Avatar, Text, Icon, Button } from '@chakra-ui/react'
 import { DashboardLayout } from '../../layout'
-import { MdKeyboardArrowLeft, MdLocationPin, MdOutlinePhone, MdEmail, MdOutlineRestoreFromTrash } from "react-icons/md";
+import { MdLocationPin, MdOutlinePhone, MdEmail, MdOutlineRestoreFromTrash } from "react-icons/md";
 import Verified from "../../assets/verified.svg"
 import Star from "../../assets/star.svg"
 import Heart from "../../assets/heart.svg"
@@ -13,7 +13,6 @@ export default function UserDetails() {
         <DashboardLayout>
             <Box>
                 <Box p='4rem' bgColor='white' borderRadius='xl' shadow={{ base: 'none', md: 'md' }}>
-                    <IconButton aria-label='back home' variant='ghost' size='lg' icon={<MdKeyboardArrowLeft />} />
                     <Box display='flex' gap={6}>
                         <Heading textColor='primary.700'>User Details</Heading>
                     </Box>
