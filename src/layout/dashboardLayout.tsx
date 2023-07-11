@@ -4,7 +4,7 @@ import { SideBar } from '../components/dashboardNav'
 import Logo from "../assets/logo.svg"
 
 
-export default function DashboardLayout({ children }: { children: any }): JSX.Element {
+export default function DashboardLayout({ children }: { children: React.ReactNode }): JSX.Element {
 
     return (
         <Box>

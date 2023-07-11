@@ -17,33 +17,33 @@ export default function SummaryCards({ title, cardIcon, totalValue, description,
     return (
         <>
             <Link to={link}>
-        <Box
-            bgColor='#F9F9F9'
-            borderRadius='10px'
-            p='2rem'
-            display='flex'
-            flexDirection='column'
-            justifyContent='space-between'
-            height='100%'
-            _hover={{
-                bgColor: '#D8F9FB',
-            }}
-        >
-            <Box display='flex' alignItems='center'>
-                <Icon as={cardIcon} w={7} h={7} />
-                <Text pl='1rem' color='primary.700' fontSize='xl' fontWeight={500}>{title}</Text>
-            </Box>
-            <Box mt='1rem'>
-                <Heading>{totalValue}</Heading>
-            </Box>
-            <Box mt='1rem' display='flex' justifyContent='space-between'>
-                <Text textColor='primary.800' fontSize='lg'>{description}</Text>
-                <Box display='flex' justifyContent='center' alignItems='center' gap={2}>
-                    <Text fontWeight={500} textColor='primary.800' fontSize='lg'>{descValue}</Text>
-                    <Icon as={MdNorthEast} color='accentGreen' w={6} h={6} />
+                <Box
+                    bgColor='#F9F9F9'
+                    borderRadius='10px'
+                    p='2rem'
+                    display='flex'
+                    flexDirection='column'
+                    justifyContent='space-between'
+                    height='100%'
+                    _hover={{
+                        bgColor: '#D8F9FB',
+                    }}
+                >
+                    <Box display='flex' alignItems='center'>
+                        <Icon as={cardIcon} w={7} h={7} />
+                        <Text pl='1rem' color='primary.700' fontSize='xl' fontWeight={500}>{title}</Text>
+                    </Box>
+                    <Box mt='1rem'>
+                        <Heading>{totalValue}</Heading>
+                    </Box>
+                    <Box mt='1rem' display='flex' justifyContent='space-between'>
+                        <Text textColor='primary.800' fontSize='lg'>{description}</Text>
+                        <Box display='flex' justifyContent='center' alignItems='center' gap={2}>
+                            <Text fontWeight={500} textColor='primary.800' fontSize='lg'>{descValue}</Text>
+                            <Icon as={MdNorthEast} color='accentGreen' w={6} h={6} />
+                        </Box>
+                    </Box>
                 </Box>
-            </Box>
-        </Box>
             </Link>
 
         </>
