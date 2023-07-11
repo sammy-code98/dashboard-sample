@@ -1,10 +1,11 @@
 import React from 'react'
 import { DashboardLayout } from '../../layout'
-import { Box, Heading, Image } from '@chakra-ui/react'
+import { Box, Heading, Text } from '@chakra-ui/react'
 import { SummaryCards } from '../../components/cards'
 import { summaryCard } from '../../fakeData/summaryCard'
 import { TableTab } from '../../components/TableTab'
 import tabData from '../../components/TableTab/TableHeadingData'
+import { UserChart } from '../../components/dashboardCharts'
 
 
 export default function Dashboard() {
@@ -42,6 +43,10 @@ export default function Dashboard() {
                         })}
 
                     </Box>
+                </Box>
+                <Box mt='2rem' p='4rem' bgColor='white' borderRadius='xl' shadow={{ base: 'none', md: 'md' }}>
+                    <Text fontSize='3xl' color='primary.700'>Users</Text>
+                    <UserChart />
                 </Box>
                 <Box mt='2rem' p='4rem' bgColor='white' borderRadius='xl' shadow={{ base: 'none', md: 'md' }}>
                     <TableTab data={tabData} />
