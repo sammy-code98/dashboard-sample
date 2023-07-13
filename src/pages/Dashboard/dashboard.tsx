@@ -5,7 +5,7 @@ import { SummaryCards } from '../../components/cards'
 import { summaryCard } from '../../fakeData/summaryCard'
 import { TableTab } from '../../components/TableTab'
 import tabData from '../../components/TableTab/TableHeadingData'
-import { UserChart, SalesLocation } from '../../components/dashboardCharts'
+import { UserChart, SalesLocation, SalesChart } from '../../components/dashboardCharts'
 
 
 export default function Dashboard() {
@@ -53,9 +53,8 @@ export default function Dashboard() {
                         <SalesLocation />
                     </Box>
                     <Box width='100%' p='4rem' bgColor='white' borderRadius='xl' shadow={{ base: 'none', md: 'md' }}>
-                        llle
+                        <SalesChart />
                     </Box>
-
 
                 </Box>
                 <Box mt='2rem' p='4rem' bgColor='white' borderRadius='xl' shadow={{ base: 'none', md: 'md' }}>
