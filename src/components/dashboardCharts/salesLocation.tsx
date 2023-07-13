@@ -1,35 +1,33 @@
 import React from 'react'
 import { Box, Divider, Flex, Text } from '@chakra-ui/react'
-import PropTypes, { InferProps } from 'prop-types';
 
 
-const SalesLocationProps = {
-    state: PropTypes.string.isRequired,
-    totalSales: PropTypes.number.isRequired
-
-}
 export default function SalesLocation() {
 
-    const LocationData: InferProps<typeof SalesLocationProps> = [
+    const LocationData = [
         {
             state: "Imo",
-            totalUsers: 4000,
+            totalSales: 4000,
         },
         {
             state: "Lagos",
-            totalUsers: 50,
+            totalSales: 50,
         },
         {
             state: "Rivers",
-            totalUsers: 100,
+            totalSales: 100,
         },
         {
             state: "Calabar",
-            totalUsers: 25,
+            totalSales: 25,
         },
         {
             state: "Kano",
-            totalUsers: 100,
+            totalSales: 100,
+        },
+        {
+            state: "Enugu",
+            totalSales: 1000,
         },
     ]
     return (
@@ -58,8 +56,8 @@ export default function SalesLocation() {
                                 justifyContent="space-between"
                                 fontSize="0.875rem"
                             >
-                                <Text>{data.country}</Text>
-                                <Text>{data.totalUsers}</Text>
+                                <Text>{data.state}</Text>
+                                <Text>{data.totalSales}</Text>
                             </Flex>
                         </Box>
                     )
