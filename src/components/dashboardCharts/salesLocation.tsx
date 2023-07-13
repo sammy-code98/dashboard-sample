@@ -40,8 +40,8 @@ export default function SalesLocation() {
                 justifyContent="space-between"
                 pb={{ base: "1rem", lg: "1.2rem" }}
             >
-                <Text>State</Text>
-                <Text>Total Users</Text>
+                <Text color='primary.700'>State</Text>
+                <Text color='primary.700'>Total Users</Text>
             </Box>
 
             <Box>
@@ -56,8 +56,8 @@ export default function SalesLocation() {
                                 justifyContent="space-between"
                                 fontSize="0.875rem"
                             >
-                                <Text>{data.state}</Text>
-                                <Text>{data.totalSales}</Text>
+                                <Text color='primary.700'>{data.state}</Text>
+                                <Text color='primary.700'>{data.totalSales}</Text>
                             </Flex>
                         </Box>
                     )

@@ -45,7 +45,7 @@ export default function Dashboard() {
                     </Box>
                 </Box>
                 <Box mt='2rem' p='4rem' bgColor='white' borderRadius='xl' shadow={{ base: 'none', md: 'md' }}>
-                    <Text fontSize='3xl' color='primary.700'>Users</Text>
+                    <Text fontSize='2xl' color='primary.700'>Users</Text>
                     <UserChart />
                 </Box>
                 <Box mt='2rem' display='flex' justifyContent='space-between' alignItems='center' gap='2rem'>
@@ -53,6 +53,7 @@ export default function Dashboard() {
                         <SalesLocation />
                     </Box>
                     <Box width='100%' p='4rem' bgColor='white' borderRadius='xl' shadow={{ base: 'none', md: 'md' }}>
+                        <Text fontSize='2xl' color='primary.700'>Sales</Text>
                         <SalesChart />
                     </Box>
 

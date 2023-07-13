@@ -47,7 +47,7 @@ export default function UserChart(): JSX.Element {
     }
 
     return (
-        <Box pr={{ lg: "1rem" }} >
+        <Box pr={{ lg: "1rem" }}>
             <ReactApexChart
                 options={options}
                 series={series}
