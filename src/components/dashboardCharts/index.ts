@@ -1,3 +1,5 @@
 import UserChart from "./userChart";
+import SalesLocation from "./salesLocation";
+import SalesChart from "./salesChart";
 
-export { UserChart };
+export { UserChart, SalesLocation, SalesChart };
